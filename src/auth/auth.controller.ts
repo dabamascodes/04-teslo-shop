@@ -57,7 +57,7 @@ export class AuthController {
 
 
   @Get('private2')
-  @SetMetadata('roles', ['admin', 'super-user'])
+  @SetMetadata('role', ['admin', 'super-user'])
   @UseGuards( AuthGuard(), UserRoleGuard )
   privateRoute2(
     @GetUser() user: User
