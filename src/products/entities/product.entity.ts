@@ -104,6 +104,7 @@ export class Product {
     )
     user: User;
 
+
     @BeforeInsert()
     checkSlugInsert() {
         if ( !this.slug ) {

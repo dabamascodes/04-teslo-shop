@@ -1,3 +1,4 @@
+import { ApiProperty } from "@nestjs/swagger";
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { Product } from './index'
 
@@ -5,9 +6,11 @@ import { Product } from './index'
 @Entity({ name: 'product_images' })
 export class ProductImage {
 
+    @ApiProperty()
     @PrimaryGeneratedColumn()
     id: number;
 
+    @ApiProperty()
     @Column('text')
     url: string;
 
